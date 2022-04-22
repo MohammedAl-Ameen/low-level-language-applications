@@ -1,0 +1,161 @@
+CCS PCM C Compiler, Version 5.049, 5967               08-Nov-20 23:26
+
+               Filename:   C:\Users\mohmmed\Desktop\0\Part1\Code\source_code.lst
+
+               ROM used:   100 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           8 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include<16f877a.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #fuses nowdt, xt 
+.................... #use delay(clock= 4 000 000) 
+....................  
+.................... void main() 
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  FF
+0008:  MOVWF  20
+0009:  BSF    03.5
+000A:  BSF    1F.0
+000B:  BSF    1F.1
+000C:  BSF    1F.2
+000D:  BCF    1F.3
+000E:  MOVLW  07
+000F:  MOVWF  1C
+0010:  BCF    03.7
+.................... { 
+....................    while(1) 
+....................    { 
+....................       if(input(pin_b0) == 1 && input(pin_b1) == 0) 
+0011:  BSF    06.0
+0012:  BCF    03.5
+0013:  BTFSS  06.0
+0014:  GOTO   037
+0015:  BSF    03.5
+0016:  BSF    06.1
+0017:  BCF    03.5
+0018:  BTFSC  06.1
+0019:  GOTO   037
+....................       {          
+....................          setup_ccp1(ccp_pwm); 
+001A:  BCF    20.2
+001B:  MOVF   20,W
+001C:  BSF    03.5
+001D:  MOVWF  07
+001E:  BCF    03.5
+001F:  BCF    07.2
+0020:  MOVLW  0C
+0021:  MOVWF  17
+....................          setup_ccp2(ccp_pwm); 
+0022:  BCF    20.1
+0023:  MOVF   20,W
+0024:  BSF    03.5
+0025:  MOVWF  07
+0026:  BCF    03.5
+0027:  BCF    07.1
+0028:  MOVLW  0C
+0029:  MOVWF  1D
+....................          setup_timer_2(T2_DIV_BY_4, 250, 1); //freq wave 1KHz 
+002A:  MOVLW  00
+002B:  MOVWF  78
+002C:  IORLW  05
+002D:  MOVWF  12
+002E:  MOVLW  FA
+002F:  BSF    03.5
+0030:  MOVWF  12
+....................          set_pwm1_duty(188); //Duty Cycel 75% 
+0031:  MOVLW  BC
+0032:  BCF    03.5
+0033:  MOVWF  15
+....................          set_pwm2_duty(125); //Duty Cycel 50% 
+0034:  MOVLW  7D
+0035:  MOVWF  1B
+....................       } 
+0036:  GOTO   061
+....................       else if(input(pin_b0) == 0 && input(pin_b1) == 1) 
+0037:  BSF    03.5
+0038:  BSF    06.0
+0039:  BCF    03.5
+003A:  BTFSC  06.0
+003B:  GOTO   05E
+003C:  BSF    03.5
+003D:  BSF    06.1
+003E:  BCF    03.5
+003F:  BTFSS  06.1
+0040:  GOTO   05E
+....................       {          
+....................          setup_ccp1(ccp_pwm); 
+0041:  BCF    20.2
+0042:  MOVF   20,W
+0043:  BSF    03.5
+0044:  MOVWF  07
+0045:  BCF    03.5
+0046:  BCF    07.2
+0047:  MOVLW  0C
+0048:  MOVWF  17
+....................          setup_ccp2(ccp_pwm); 
+0049:  BCF    20.1
+004A:  MOVF   20,W
+004B:  BSF    03.5
+004C:  MOVWF  07
+004D:  BCF    03.5
+004E:  BCF    07.1
+004F:  MOVLW  0C
+0050:  MOVWF  1D
+....................          setup_timer_2(T2_DIV_BY_1, 50, 1); //freq wave 20KHz 
+0051:  MOVLW  00
+0052:  MOVWF  78
+0053:  IORLW  04
+0054:  MOVWF  12
+0055:  MOVLW  32
+0056:  BSF    03.5
+0057:  MOVWF  12
+....................          set_pwm1_duty(30); //Duty Cycel 60% 
+0058:  MOVLW  1E
+0059:  BCF    03.5
+005A:  MOVWF  15
+....................          set_pwm2_duty(43); //Duty Cycel 85%       
+005B:  MOVLW  2B
+005C:  MOVWF  1B
+....................       } 
+005D:  GOTO   061
+....................       else 
+....................       { 
+....................          setup_ccp1(CCP_OFF); 
+005E:  MOVLW  F0
+005F:  ANDWF  17,F
+....................          setup_ccp2(CCP_OFF);          
+0060:  ANDWF  1D,F
+....................       } 
+0061:  BSF    03.5
+0062:  GOTO   011
+....................    } 
+.................... } 
+....................  
+0063:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2F41   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

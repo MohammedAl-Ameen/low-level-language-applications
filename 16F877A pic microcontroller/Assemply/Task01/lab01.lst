@@ -1,0 +1,83 @@
+MPASM  5.33                         LAB01.ASM   3-8-2021  22:38:53         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                      00002 
+                      00003 
+                      00004         PROCESSOR 16F877        ; Define MCU type
+                      00005         ;__CONFIG 0x3733                ; Set config fuses
+                      00006 
+                      00007 ; Register Label Equates....................................
+                      00008         
+  00000006            00009 PORTB   EQU     06      ; Port B Data Register  
+  00000086            00010 TRISB   EQU     86      ; Port B Direction Register
+  00000020            00011 CNT     EQU     20      ; GPR used as delay counter
+                      00012 
+                      00013 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                      00014 
+                      00015 ; Initialise Port B (Port A defaults to inputs).............
+                      00016         
+0000   1683 1303      00017         BANKSEL TRISB           ; Select bank 1
+0002   3000           00018         MOVLW   b'00000000'     ; Port B Direction Code
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0003   0086           00019         MOVWF   TRISB           ; Load the DDR code into F86
+0004   1283 1303      00020         BANKSEL PORTB           ; Select bank 0
+0006   280B           00021         GOTO    reset           ; Jump to main loop
+                      00022 
+                      00023 
+                      00024 ; 'delay' subroutine ........................................
+                      00025         
+0007   00A0           00026 delay   MOVWF   CNT             ; Copy W to CNT register
+Message[305]: Using default destination of 1 (file).
+0008   0BA0           00027 down    DECFSZ  CNT             ; Decrement CNT register 
+0009   2808           00028         GOTO    down            ; and repeat until zero
+000A   0008           00029         RETURN                  ; Jump back to main program
+                      00030 
+                      00031 
+                      00032 ; Start main loop ...........................................
+                      00033 
+000B   0186           00034 reset   CLRF    PORTB           ; Clear Port B Data 
+                      00035 
+000C   0064           00036 start   clrwdt
+Message[305]: Using default destination of 1 (file).
+000D   0A86           00037         INCF    PORTB           ; Increment output at Port B 
+                      00038 ;       MOVLW   0FF             ; Delay count literal
+                      00039 ;       CALL    delay           ; Jump to subroutine 'delay'
+000E   280C           00040         GOTO    start           ; Repeat main loop always
+                      00041 
+                      00042         END                     ; Terminate source code
+MPASM  5.33                         LAB01.ASM   3-8-2021  22:38:53         PAGE  2
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CNT                               00000020
+PORTB                             00000006
+TRISB                             00000086
+__16F877A                         00000001
+__DEBUG                           1
+delay                             00000007
+down                              00000008
+reset                             0000000B
+start                             0000000C
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXXXXXXXX- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    15
+Program Memory Words Free:  8177
+
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
+
+

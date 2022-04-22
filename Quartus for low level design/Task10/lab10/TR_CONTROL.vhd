@@ -1,0 +1,41 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+use work.REF.all;
+
+entity TR_CONTROL is 
+port ( CUO : IN STD_LOGIC_VECTOR (36 DOWNTO 0 );
+		 AC,DR : IN STD_LOGIC_VECTOR (15 DOWNTO 0) ;
+	   FGO , FGI , E : IN STD_LOGIC ; 
+	   PL , INR , CLR : OUT STD_LOGIC 
+		);
+END;
+
+
+
+ARCHITECTURE TR_CONTROL OF TR_CONTROL IS 
+SIGNAL D : STD_LOGIC_VECTOR (7 DOWNTO 0);
+SIGNAL T : STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL B : STD_LOGIC_VECTOR (11 downto 0);
+SIGNAL p,r : std_logic; 
+SIGNAL I : STD_LOGIC;
+
+BEGIN
+D <= CUO(19 DOWNTO 12);
+B <= CUO(11 DOWNTO 0);
+
+PROCESS(D)
+begin 
+L1 : FOR i in 0 to  15 loop 
+T( i ) <= CUO(36 - i); 
+end  loop;
+END PROCESS;
+
+I <= CUO(20);
+r <= CUO(19) and (not CUO(20)) and CUO(32);
+p <= CUO(19) and CUO(20) and CUO(32);
+
+PL <= T(0);
+CLR <= '0';
+INR <='0';
+
+END;

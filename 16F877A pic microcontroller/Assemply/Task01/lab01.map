@@ -1,0 +1,37 @@
+MPLINK 4.33, Linker
+Linker Map File - Created Mon Mar 08 22:38:53 2021
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00001e
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000e      
+            15 out of 8456 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    delay   0x000007    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+                     down   0x000008    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+                    reset   0x00000b    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+                    start   0x00000c    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    delay   0x000007    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+                     down   0x000008    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+                    reset   0x00000b    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+                    start   0x00000c    program     static C:\Users\mohmmed\Desktop\Micro Lab\Task1#\lab01.ASM
+
+

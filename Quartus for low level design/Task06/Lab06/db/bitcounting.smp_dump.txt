@@ -1,0 +1,6 @@
+
+State Machine - |bitcounting|controller:S1|CurrentState
+Name CurrentState.s3 CurrentState.s2 CurrentState.s1 
+CurrentState.s1 0 0 0 
+CurrentState.s2 0 1 1 
+CurrentState.s3 1 0 1 

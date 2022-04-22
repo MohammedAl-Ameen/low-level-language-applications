@@ -1,0 +1,27 @@
+|State
+input => currentstate~3.DATAB
+input => currentstate~6.DATAB
+input => currentstate~9.DATAB
+input => currentstate~12.DATAB
+input => output~17.IN0
+input => output~19.IN0
+input => output~21.IN0
+input => output~23.IN0
+input => output~24.IN0
+input => output~22.IN0
+input => output~20.IN0
+input => output~18.IN0
+input => currentstate~0.DATAB
+input => currentstate~13.DATAB
+input => currentstate~10.DATAB
+input => currentstate~7.DATAB
+clk => output[0]~reg0.CLK
+clk => currentstate~29.DATAIN
+rest => currentstate~33.DATAIN
+rest => output[0]~reg0.ENA
+output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

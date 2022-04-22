@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.517 ns
+From           : counter:U1|output[0]
+To             : pump0
+From Clock     : slow
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'fast'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : counter:U1|output[1]
+To             : counter:U1|output[1]
+From Clock     : fast
+To Clock       : fast
+Failed Paths   : 0
+
+Type           : Clock Setup: 'slow'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : counter:U1|output[1]
+To             : counter:U1|output[1]
+From Clock     : slow
+To Clock       : slow
+Failed Paths   : 0
+
+Type           : Clock Setup: 'speed_select'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : counter:U1|output[1]
+To             : counter:U1|output[1]
+From Clock     : speed_select
+To Clock       : speed_select
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

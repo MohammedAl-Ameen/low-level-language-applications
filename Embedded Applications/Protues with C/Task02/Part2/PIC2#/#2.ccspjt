@@ -1,0 +1,36 @@
+[PROJECT]
+Target=#2.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=#2.c
+[#2.c]
+Type=4
+[mru-list]
+1=#2.c
+
+[defines]
+buildcount=4
+
+[ProjectLog]
+Days=1
+D1=24-10-2020
+D1_L=3
+D1_L1=[81110]Started Editing.
+D1_L2=[81184]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L3=[81184]Project Closed.
+
+[Opened Files]
+1=..\PIC1#\#1.c
+t1=1
+2=#2.c
+t2=1
+Count=2
+[Units]
+Count=1
+1=#2 (main)

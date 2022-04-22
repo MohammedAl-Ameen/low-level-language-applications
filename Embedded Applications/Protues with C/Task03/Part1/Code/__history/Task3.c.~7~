@@ -1,0 +1,32 @@
+#include<16f877a.h>
+#use delay(clock = 4000000)
+#include <lcd.c>
+#Device ABC=10;
+
+
+double value;
+
+void main(){
+lcd_init();
+setup_adc(ADC_CLOCK_INTERNAL);
+setup_adc_ports(ALL_ANALOG);
+
+while(1){
+set_adc_channel(0);
+value=read_adc();
+value=(((value/0.009)+0.095)/5.0);
+
+printf(lcd_putc, "\f value = %f \n" , value);
+
+
+
+}
+
+
+
+
+
+
+
+
+}

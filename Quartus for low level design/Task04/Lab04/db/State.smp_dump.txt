@@ -1,0 +1,7 @@
+
+State Machine - |State|currentstate
+Name currentstate.s3 currentstate.s2 currentstate.s1 currentstate.s0 
+currentstate.s0 0 0 0 0 
+currentstate.s1 0 0 1 1 
+currentstate.s2 0 1 0 1 
+currentstate.s3 1 0 0 1 

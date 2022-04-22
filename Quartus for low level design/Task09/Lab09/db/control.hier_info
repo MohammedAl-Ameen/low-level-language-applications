@@ -1,0 +1,295 @@
+|control
+INC => T:TIMINGU.INC
+CLR => T:TIMINGU.CLK
+CLK => T:TIMINGU.CLR
+IR[0] => output[0].DATAIN
+IR[1] => output[1].DATAIN
+IR[2] => output[2].DATAIN
+IR[3] => output[3].DATAIN
+IR[4] => output[4].DATAIN
+IR[5] => output[5].DATAIN
+IR[6] => output[6].DATAIN
+IR[7] => output[7].DATAIN
+IR[8] => output[8].DATAIN
+IR[9] => output[9].DATAIN
+IR[10] => output[10].DATAIN
+IR[11] => output[11].DATAIN
+IR[12] => decoder:DE.input[0]
+IR[13] => decoder:DE.input[1]
+IR[14] => decoder:DE.input[2]
+IR[15] => output[20].DATAIN
+output[0] <= IR[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= IR[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= IR[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= IR[3].DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= IR[4].DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= IR[5].DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= IR[6].DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= IR[7].DB_MAX_OUTPUT_PORT_TYPE
+output[8] <= IR[8].DB_MAX_OUTPUT_PORT_TYPE
+output[9] <= IR[9].DB_MAX_OUTPUT_PORT_TYPE
+output[10] <= IR[10].DB_MAX_OUTPUT_PORT_TYPE
+output[11] <= IR[11].DB_MAX_OUTPUT_PORT_TYPE
+output[12] <= decoder:DE.output[0]
+output[13] <= decoder:DE.output[1]
+output[14] <= decoder:DE.output[2]
+output[15] <= decoder:DE.output[3]
+output[16] <= decoder:DE.output[4]
+output[17] <= decoder:DE.output[5]
+output[18] <= decoder:DE.output[6]
+output[19] <= decoder:DE.output[7]
+output[20] <= IR[15].DB_MAX_OUTPUT_PORT_TYPE
+output[21] <= T:TIMINGU.output[0]
+output[22] <= T:TIMINGU.output[1]
+output[23] <= T:TIMINGU.output[2]
+output[24] <= T:TIMINGU.output[3]
+output[25] <= T:TIMINGU.output[4]
+output[26] <= T:TIMINGU.output[5]
+output[27] <= T:TIMINGU.output[6]
+output[28] <= T:TIMINGU.output[7]
+output[29] <= T:TIMINGU.output[8]
+output[30] <= T:TIMINGU.output[9]
+output[31] <= T:TIMINGU.output[10]
+output[32] <= T:TIMINGU.output[11]
+output[33] <= T:TIMINGU.output[12]
+output[34] <= T:TIMINGU.output[13]
+output[35] <= T:TIMINGU.output[14]
+output[36] <= T:TIMINGU.output[15]
+
+
+|control|decoder:DE
+input[0] => Equal0.IN2
+input[0] => Equal1.IN0
+input[0] => Equal2.IN2
+input[0] => Equal3.IN1
+input[0] => Equal4.IN2
+input[0] => Equal5.IN1
+input[0] => Equal6.IN2
+input[0] => Equal7.IN2
+input[1] => Equal0.IN1
+input[1] => Equal1.IN2
+input[1] => Equal2.IN0
+input[1] => Equal3.IN0
+input[1] => Equal4.IN1
+input[1] => Equal5.IN2
+input[1] => Equal6.IN1
+input[1] => Equal7.IN1
+input[2] => Equal0.IN0
+input[2] => Equal1.IN1
+input[2] => Equal2.IN1
+input[2] => Equal3.IN2
+input[2] => Equal4.IN0
+input[2] => Equal5.IN0
+input[2] => Equal6.IN0
+input[2] => Equal7.IN0
+enable => output~36.IN1
+enable => output~37.IN1
+enable => output~38.IN1
+enable => output~39.IN1
+enable => output~40.IN1
+enable => output~41.IN1
+enable => output~42.IN1
+enable => output~43.IN1
+enable => output[7]~0.IN1
+output[0] <= output[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= output[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= output[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= output[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control|T:TIMINGU
+INC => synchcnt:COUNT.inc
+CLK => synchcnt:COUNT.clk
+CLR => synchcnt:COUNT.clr
+output[0] <= decoder16:DEC1.output[0]
+output[1] <= decoder16:DEC1.output[1]
+output[2] <= decoder16:DEC1.output[2]
+output[3] <= decoder16:DEC1.output[3]
+output[4] <= decoder16:DEC1.output[4]
+output[5] <= decoder16:DEC1.output[5]
+output[6] <= decoder16:DEC1.output[6]
+output[7] <= decoder16:DEC1.output[7]
+output[8] <= decoder16:DEC1.output[8]
+output[9] <= decoder16:DEC1.output[9]
+output[10] <= decoder16:DEC1.output[10]
+output[11] <= decoder16:DEC1.output[11]
+output[12] <= decoder16:DEC1.output[12]
+output[13] <= decoder16:DEC1.output[13]
+output[14] <= decoder16:DEC1.output[14]
+output[15] <= decoder16:DEC1.output[15]
+
+
+|control|T:TIMINGU|synchcnt:COUNT
+inc => jk_ff:a1.inc
+inc => jk_ff:a2.inc
+inc => jk_ff:a3.inc
+inc => jk_ff:a4.inc
+clk => jk_ff:a1.clk
+clk => jk_ff:a2.clk
+clk => jk_ff:a3.clk
+clk => jk_ff:a4.clk
+clr => jk_ff:a1.clr
+clr => jk_ff:a2.clr
+clr => jk_ff:a3.clr
+clr => jk_ff:a4.clr
+q[0] <= jk_ff:a1.q
+q[1] <= jk_ff:a2.q
+q[2] <= jk_ff:a3.q
+q[3] <= jk_ff:a4.q
+
+
+|control|T:TIMINGU|synchcnt:COUNT|jk_ff:a1
+j => Mux0.IN3
+k => Mux0.IN4
+inc => set~0.IN0
+clk => set.CLK
+clr => set~0.IN1
+q <= set.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2
+j => Mux0.IN3
+k => Mux0.IN4
+inc => set~0.IN0
+clk => set.CLK
+clr => set~0.IN1
+q <= set.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3
+j => Mux0.IN3
+k => Mux0.IN4
+inc => set~0.IN0
+clk => set.CLK
+clr => set~0.IN1
+q <= set.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4
+j => Mux0.IN3
+k => Mux0.IN4
+inc => set~0.IN0
+clk => set.CLK
+clr => set~0.IN1
+q <= set.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control|T:TIMINGU|decoder16:DEC1
+input[0] => decoder:DECODER1.input[0]
+input[0] => decoder:DECODER2.input[0]
+input[1] => decoder:DECODER1.input[1]
+input[1] => decoder:DECODER2.input[1]
+input[2] => decoder:DECODER1.input[2]
+input[2] => decoder:DECODER2.input[2]
+input[3] => decoder:DECODER1.enable
+input[3] => decoder:DECODER2.enable
+output[0] <= decoder:DECODER2.output[0]
+output[1] <= decoder:DECODER2.output[1]
+output[2] <= decoder:DECODER2.output[2]
+output[3] <= decoder:DECODER2.output[3]
+output[4] <= decoder:DECODER2.output[4]
+output[5] <= decoder:DECODER2.output[5]
+output[6] <= decoder:DECODER2.output[6]
+output[7] <= decoder:DECODER2.output[7]
+output[8] <= decoder:DECODER1.output[0]
+output[9] <= decoder:DECODER1.output[1]
+output[10] <= decoder:DECODER1.output[2]
+output[11] <= decoder:DECODER1.output[3]
+output[12] <= decoder:DECODER1.output[4]
+output[13] <= decoder:DECODER1.output[5]
+output[14] <= decoder:DECODER1.output[6]
+output[15] <= decoder:DECODER1.output[7]
+
+
+|control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1
+input[0] => Equal0.IN2
+input[0] => Equal1.IN0
+input[0] => Equal2.IN2
+input[0] => Equal3.IN1
+input[0] => Equal4.IN2
+input[0] => Equal5.IN1
+input[0] => Equal6.IN2
+input[0] => Equal7.IN2
+input[1] => Equal0.IN1
+input[1] => Equal1.IN2
+input[1] => Equal2.IN0
+input[1] => Equal3.IN0
+input[1] => Equal4.IN1
+input[1] => Equal5.IN2
+input[1] => Equal6.IN1
+input[1] => Equal7.IN1
+input[2] => Equal0.IN0
+input[2] => Equal1.IN1
+input[2] => Equal2.IN1
+input[2] => Equal3.IN2
+input[2] => Equal4.IN0
+input[2] => Equal5.IN0
+input[2] => Equal6.IN0
+input[2] => Equal7.IN0
+enable => output~36.IN1
+enable => output~37.IN1
+enable => output~38.IN1
+enable => output~39.IN1
+enable => output~40.IN1
+enable => output~41.IN1
+enable => output~42.IN1
+enable => output~43.IN1
+enable => output[7]~0.IN1
+output[0] <= output[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= output[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= output[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= output[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2
+input[0] => Equal0.IN2
+input[0] => Equal1.IN0
+input[0] => Equal2.IN2
+input[0] => Equal3.IN1
+input[0] => Equal4.IN2
+input[0] => Equal5.IN1
+input[0] => Equal6.IN2
+input[0] => Equal7.IN2
+input[1] => Equal0.IN1
+input[1] => Equal1.IN2
+input[1] => Equal2.IN0
+input[1] => Equal3.IN0
+input[1] => Equal4.IN1
+input[1] => Equal5.IN2
+input[1] => Equal6.IN1
+input[1] => Equal7.IN1
+input[2] => Equal0.IN0
+input[2] => Equal1.IN1
+input[2] => Equal2.IN1
+input[2] => Equal3.IN2
+input[2] => Equal4.IN0
+input[2] => Equal5.IN0
+input[2] => Equal6.IN0
+input[2] => Equal7.IN0
+enable => output~36.IN1
+enable => output~37.IN1
+enable => output~38.IN1
+enable => output~39.IN1
+enable => output~40.IN1
+enable => output~41.IN1
+enable => output~42.IN1
+enable => output~43.IN1
+enable => output[7]~0.IN1
+output[0] <= output[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= output[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= output[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= output[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

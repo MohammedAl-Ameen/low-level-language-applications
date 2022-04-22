@@ -1,0 +1,99 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 strtok.save
+022     n
+023-036 string1
+037-04A string2
+04B     @TRIS_C
+04C-04D strcmp.s1
+04C     MAIN.@SCRATCH1
+04C     @PSTRINGC7_723.@SCRATCH1
+04C     @GETCH_2_.@SCRATCH1
+04C     @PSTRINGC7_731.@SCRATCH1
+04C     @PSTRINGC7_738.@SCRATCH1
+04D     @delay_ms1.P1
+04D     MAIN.@SCRATCH2
+04D     @PSTRINGC7_723.@SCRATCH2
+04D     @PSTRINGC7_731.@SCRATCH2
+04D     @PSTRINGC7_738.@SCRATCH2
+04E-04F strcmp.s2
+04E     @PSTRINGC7_723.@SCRATCH3
+04E     @PSTRINGC7_731.@SCRATCH3
+04E     @PSTRINGC7_738.@SCRATCH3
+04F     @PUTCHAR_3_.P1
+04F     @PUTCHAR_1_.P2
+04F     @PUTCHAR_2_.P3
+04F     @PSTRINGC7_723.@SCRATCH4
+04F     @PSTRINGC7_731.@SCRATCH4
+04F     @PSTRINGC7_738.@SCRATCH4
+050     strcmp.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const722.call
+000011  @const729.call
+000015  @const736.call
+000024  @const743.call
+000029  @const746.call
+00002E  @delay_ms1
+000043  @PUTCHAR_1_
+000065  @PSTRINGC7_723
+0000BD  @PUTCHAR_2_
+0000DF  @PSTRINGC7_731
+000137  @GETCH_2_
+00015E  @PUTCHAR_3_
+000180  strcmp
+0001C6  @PSTRINGC7_738
+00021C  MAIN
+00021C  @cinit1
+000236  @cinit2
+
+Project Directory:
+    C:\Users\Mohammed\Desktop\New folder (2)\
+
+Project Files:
+    lcd2.c                                                  [18-Apr-21 14:28  CRC=072F562D]
+    16F877A.h                                               [20-Mar-21 23:02  CRC=81334808]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\string.h   [14-Jul-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h   [16-Jul-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h    [03-Jan-08 13:55  CRC=2D1F019F]
+
+Source signature=900B7A6E
+
+Units:
+    lcd2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   lcd2.xsym
+    Errors:      lcd2.err
+    Ext Symbols: lcd2.esym
+    INHX8:       lcd2.hex
+    Symbols:     lcd2.sym
+    List:        lcd2.lst
+    Debug/COFF:  lcd2.cof
+    Project:     lcd2.ccspjt
+    Call Tree:   lcd2.tre
+    Statistics:  lcd2.STA

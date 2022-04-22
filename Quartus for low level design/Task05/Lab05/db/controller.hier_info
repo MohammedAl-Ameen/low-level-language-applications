@@ -1,0 +1,45 @@
+|controller
+fast => mux:U0.input0
+slow => mux:U0.input1
+speed_select => mux:U0.sel
+init => counter:U1.rst
+run => counter:U1.enable
+pump0 <= decoder:U2.output0
+pump1 <= decoder:U2.output2
+motor0 <= decoder:U2.output1
+motor1 <= decoder:U2.output3
+
+
+|controller|mux:U0
+sel => output~1.IN0
+sel => output~0.IN0
+input0 => output~0.IN1
+input1 => output~1.IN1
+output <= output~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controller|counter:U1
+clk => output[0]~reg0.CLK
+clk => output[1]~reg0.CLK
+enable => ~NO_FANOUT~
+rst => output[0]~reg0.ACLR
+rst => output[1]~reg0.ACLR
+output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controller|decoder:U2
+sel[0] => output2~0.IN0
+sel[0] => output3~0.IN0
+sel[0] => output0~0.IN0
+sel[0] => output1~0.IN0
+sel[1] => output1~0.IN1
+sel[1] => output3~0.IN1
+sel[1] => output0~0.IN1
+sel[1] => output2~0.IN1
+output0 <= output0~0.DB_MAX_OUTPUT_PORT_TYPE
+output1 <= output1~0.DB_MAX_OUTPUT_PORT_TYPE
+output2 <= output2~0.DB_MAX_OUTPUT_PORT_TYPE
+output3 <= output3~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

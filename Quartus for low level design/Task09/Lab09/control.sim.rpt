@@ -1,0 +1,709 @@
+Simulator report for control
+Sun Aug 15 17:36:06 2021
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 322 nodes    ;
+; Simulation Coverage         ;      14.29 % ;
+; Total Number of Transitions ; 1139         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      14.29 % ;
+; Total nodes checked                                 ; 322          ;
+; Total output ports checked                          ; 322          ;
+; Total output ports with complete 1/0-value coverage ; 46           ;
+; Total output ports with no 1/0-value coverage       ; 227          ;
+; Total output ports with no 1-value coverage         ; 249          ;
+; Total output ports with no 0-value coverage         ; 254          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                             ; Output Port Name                                                                                      ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; |control|CLK                                                                                          ; |control|CLK                                                                                          ; out              ;
+; |control|output[29]                                                                                   ; |control|output[29]                                                                                   ; pin_out          ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~1                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~1                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~2                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~2                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~3                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~3                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~34                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~34                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~11                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~11                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~12                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~12                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~13                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~13                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~14                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~14                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~15                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~15                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~0                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~0                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~0                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~0                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~1                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~1                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~1                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~1                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[0]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[0]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~3                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~3                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~2                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~2                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~6                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~6                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~43                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~43                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~3                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~3                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~10                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~10                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~30                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~30                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~32                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~32                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~34                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~34                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~11                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~11                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~12                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~12                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~13                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~13                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~14                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~14                                            ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|set~0                                                      ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|set~0                                                      ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|set~0                                                      ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|set~0                                                      ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|set~0                                                      ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|set~0                                                      ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a1|set~0                                                      ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a1|set~0                                                      ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                         ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                             ; Output Port Name                                                                                      ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; |control|INC                                                                                          ; |control|INC                                                                                          ; out              ;
+; |control|CLR                                                                                          ; |control|CLR                                                                                          ; out              ;
+; |control|IR[0]                                                                                        ; |control|IR[0]                                                                                        ; out              ;
+; |control|IR[1]                                                                                        ; |control|IR[1]                                                                                        ; out              ;
+; |control|IR[2]                                                                                        ; |control|IR[2]                                                                                        ; out              ;
+; |control|IR[3]                                                                                        ; |control|IR[3]                                                                                        ; out              ;
+; |control|IR[4]                                                                                        ; |control|IR[4]                                                                                        ; out              ;
+; |control|IR[5]                                                                                        ; |control|IR[5]                                                                                        ; out              ;
+; |control|IR[6]                                                                                        ; |control|IR[6]                                                                                        ; out              ;
+; |control|IR[7]                                                                                        ; |control|IR[7]                                                                                        ; out              ;
+; |control|IR[8]                                                                                        ; |control|IR[8]                                                                                        ; out              ;
+; |control|IR[9]                                                                                        ; |control|IR[9]                                                                                        ; out              ;
+; |control|IR[10]                                                                                       ; |control|IR[10]                                                                                       ; out              ;
+; |control|IR[11]                                                                                       ; |control|IR[11]                                                                                       ; out              ;
+; |control|IR[12]                                                                                       ; |control|IR[12]                                                                                       ; out              ;
+; |control|IR[13]                                                                                       ; |control|IR[13]                                                                                       ; out              ;
+; |control|IR[14]                                                                                       ; |control|IR[14]                                                                                       ; out              ;
+; |control|IR[15]                                                                                       ; |control|IR[15]                                                                                       ; out              ;
+; |control|output[0]                                                                                    ; |control|output[0]                                                                                    ; pin_out          ;
+; |control|output[1]                                                                                    ; |control|output[1]                                                                                    ; pin_out          ;
+; |control|output[2]                                                                                    ; |control|output[2]                                                                                    ; pin_out          ;
+; |control|output[3]                                                                                    ; |control|output[3]                                                                                    ; pin_out          ;
+; |control|output[4]                                                                                    ; |control|output[4]                                                                                    ; pin_out          ;
+; |control|output[5]                                                                                    ; |control|output[5]                                                                                    ; pin_out          ;
+; |control|output[6]                                                                                    ; |control|output[6]                                                                                    ; pin_out          ;
+; |control|output[7]                                                                                    ; |control|output[7]                                                                                    ; pin_out          ;
+; |control|output[8]                                                                                    ; |control|output[8]                                                                                    ; pin_out          ;
+; |control|output[9]                                                                                    ; |control|output[9]                                                                                    ; pin_out          ;
+; |control|output[10]                                                                                   ; |control|output[10]                                                                                   ; pin_out          ;
+; |control|output[11]                                                                                   ; |control|output[11]                                                                                   ; pin_out          ;
+; |control|output[12]                                                                                   ; |control|output[12]                                                                                   ; pin_out          ;
+; |control|output[13]                                                                                   ; |control|output[13]                                                                                   ; pin_out          ;
+; |control|output[14]                                                                                   ; |control|output[14]                                                                                   ; pin_out          ;
+; |control|output[15]                                                                                   ; |control|output[15]                                                                                   ; pin_out          ;
+; |control|output[16]                                                                                   ; |control|output[16]                                                                                   ; pin_out          ;
+; |control|output[17]                                                                                   ; |control|output[17]                                                                                   ; pin_out          ;
+; |control|output[18]                                                                                   ; |control|output[18]                                                                                   ; pin_out          ;
+; |control|output[19]                                                                                   ; |control|output[19]                                                                                   ; pin_out          ;
+; |control|output[20]                                                                                   ; |control|output[20]                                                                                   ; pin_out          ;
+; |control|output[21]                                                                                   ; |control|output[21]                                                                                   ; pin_out          ;
+; |control|output[22]                                                                                   ; |control|output[22]                                                                                   ; pin_out          ;
+; |control|output[23]                                                                                   ; |control|output[23]                                                                                   ; pin_out          ;
+; |control|output[24]                                                                                   ; |control|output[24]                                                                                   ; pin_out          ;
+; |control|output[25]                                                                                   ; |control|output[25]                                                                                   ; pin_out          ;
+; |control|output[26]                                                                                   ; |control|output[26]                                                                                   ; pin_out          ;
+; |control|output[27]                                                                                   ; |control|output[27]                                                                                   ; pin_out          ;
+; |control|output[28]                                                                                   ; |control|output[28]                                                                                   ; pin_out          ;
+; |control|output[30]                                                                                   ; |control|output[30]                                                                                   ; pin_out          ;
+; |control|output[31]                                                                                   ; |control|output[31]                                                                                   ; pin_out          ;
+; |control|output[32]                                                                                   ; |control|output[32]                                                                                   ; pin_out          ;
+; |control|output[33]                                                                                   ; |control|output[33]                                                                                   ; pin_out          ;
+; |control|output[34]                                                                                   ; |control|output[34]                                                                                   ; pin_out          ;
+; |control|output[35]                                                                                   ; |control|output[35]                                                                                   ; pin_out          ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~0                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~0                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~36                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~36                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~37                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~37                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~38                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~38                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[0]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[0]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~2                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~2                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~39                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~39                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~40                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~40                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~4                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~4                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~5                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~5                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~41                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~41                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~42                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~42                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~7                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~7                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~8                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~8                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~9                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~9                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~43                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~43                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~11                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~11                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~12                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~12                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~13                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~13                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~14                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~14                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~4                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~4                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]~15                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]~15                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~5                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~5                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~16                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~16                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~17                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~17                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~6                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~6                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~18                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~18                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~19                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~19                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~20                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~20                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~7                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~7                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~21                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~21                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~22                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~22                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~23                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~23                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~8                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~8                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~24                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~24                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~25                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~25                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~26                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~26                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~9                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~9                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~27                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~27                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~28                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~28                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~29                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~29                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~10                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~10                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~31                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~31                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~33                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~33                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~35                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~35                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~37                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~37                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~38                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~38                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~39                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~39                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~40                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~40                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~5                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~5                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~41                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~41                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~42                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~42                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~8                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~8                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~9                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~9                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~12                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~12                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~13                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~13                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~14                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~14                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~4                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~4                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]~15                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]~15                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~5                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~5                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~16                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~16                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~17                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~17                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~6                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~6                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~18                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~18                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~19                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~19                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~20                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~20                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~7                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~7                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~21                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~21                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~22                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~22                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~23                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~23                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~8                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~8                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~24                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~24                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~25                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~25                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~26                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~26                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~9                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~9                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~27                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~27                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~28                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~28                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~29                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~29                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~15                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~15                                            ; out0             ;
+; |control|decoder:DE|comb~0                                                                            ; |control|decoder:DE|comb~0                                                                            ; out0             ;
+; |control|decoder:DE|comb~1                                                                            ; |control|decoder:DE|comb~1                                                                            ; out0             ;
+; |control|decoder:DE|output[7]~1                                                                       ; |control|decoder:DE|output[7]~1                                                                       ; out0             ;
+; |control|decoder:DE|output[0]                                                                         ; |control|decoder:DE|output[0]                                                                         ; out              ;
+; |control|decoder:DE|output[7]~2                                                                       ; |control|decoder:DE|output[7]~2                                                                       ; out              ;
+; |control|decoder:DE|output[7]~3                                                                       ; |control|decoder:DE|output[7]~3                                                                       ; out0             ;
+; |control|decoder:DE|comb~2                                                                            ; |control|decoder:DE|comb~2                                                                            ; out0             ;
+; |control|decoder:DE|output[7]~4                                                                       ; |control|decoder:DE|output[7]~4                                                                       ; out              ;
+; |control|decoder:DE|output[6]~5                                                                       ; |control|decoder:DE|output[6]~5                                                                       ; out              ;
+; |control|decoder:DE|output[1]                                                                         ; |control|decoder:DE|output[1]                                                                         ; out              ;
+; |control|decoder:DE|output[7]~6                                                                       ; |control|decoder:DE|output[7]~6                                                                       ; out0             ;
+; |control|decoder:DE|output[7]~7                                                                       ; |control|decoder:DE|output[7]~7                                                                       ; out              ;
+; |control|decoder:DE|output[6]~8                                                                       ; |control|decoder:DE|output[6]~8                                                                       ; out              ;
+; |control|decoder:DE|output[5]~9                                                                       ; |control|decoder:DE|output[5]~9                                                                       ; out              ;
+; |control|decoder:DE|comb~3                                                                            ; |control|decoder:DE|comb~3                                                                            ; out0             ;
+; |control|decoder:DE|output[7]~10                                                                      ; |control|decoder:DE|output[7]~10                                                                      ; out0             ;
+; |control|decoder:DE|output[2]                                                                         ; |control|decoder:DE|output[2]                                                                         ; out              ;
+; |control|decoder:DE|output[7]~11                                                                      ; |control|decoder:DE|output[7]~11                                                                      ; out              ;
+; |control|decoder:DE|output[6]~12                                                                      ; |control|decoder:DE|output[6]~12                                                                      ; out              ;
+; |control|decoder:DE|output[5]~13                                                                      ; |control|decoder:DE|output[5]~13                                                                      ; out              ;
+; |control|decoder:DE|output[4]~14                                                                      ; |control|decoder:DE|output[4]~14                                                                      ; out              ;
+; |control|decoder:DE|comb~4                                                                            ; |control|decoder:DE|comb~4                                                                            ; out0             ;
+; |control|decoder:DE|output[1]~15                                                                      ; |control|decoder:DE|output[1]~15                                                                      ; out              ;
+; |control|decoder:DE|comb~5                                                                            ; |control|decoder:DE|comb~5                                                                            ; out0             ;
+; |control|decoder:DE|output[2]~16                                                                      ; |control|decoder:DE|output[2]~16                                                                      ; out              ;
+; |control|decoder:DE|output[2]~17                                                                      ; |control|decoder:DE|output[2]~17                                                                      ; out              ;
+; |control|decoder:DE|comb~6                                                                            ; |control|decoder:DE|comb~6                                                                            ; out0             ;
+; |control|decoder:DE|output[3]~18                                                                      ; |control|decoder:DE|output[3]~18                                                                      ; out              ;
+; |control|decoder:DE|output[3]~19                                                                      ; |control|decoder:DE|output[3]~19                                                                      ; out              ;
+; |control|decoder:DE|output[3]~20                                                                      ; |control|decoder:DE|output[3]~20                                                                      ; out              ;
+; |control|decoder:DE|comb~7                                                                            ; |control|decoder:DE|comb~7                                                                            ; out0             ;
+; |control|decoder:DE|output[4]~21                                                                      ; |control|decoder:DE|output[4]~21                                                                      ; out              ;
+; |control|decoder:DE|output[4]~22                                                                      ; |control|decoder:DE|output[4]~22                                                                      ; out              ;
+; |control|decoder:DE|output[4]~23                                                                      ; |control|decoder:DE|output[4]~23                                                                      ; out              ;
+; |control|decoder:DE|comb~8                                                                            ; |control|decoder:DE|comb~8                                                                            ; out0             ;
+; |control|decoder:DE|output[5]~24                                                                      ; |control|decoder:DE|output[5]~24                                                                      ; out              ;
+; |control|decoder:DE|output[5]~25                                                                      ; |control|decoder:DE|output[5]~25                                                                      ; out              ;
+; |control|decoder:DE|output[5]~26                                                                      ; |control|decoder:DE|output[5]~26                                                                      ; out              ;
+; |control|decoder:DE|comb~9                                                                            ; |control|decoder:DE|comb~9                                                                            ; out0             ;
+; |control|decoder:DE|output[6]~27                                                                      ; |control|decoder:DE|output[6]~27                                                                      ; out              ;
+; |control|decoder:DE|output[6]~28                                                                      ; |control|decoder:DE|output[6]~28                                                                      ; out              ;
+; |control|decoder:DE|output[6]~29                                                                      ; |control|decoder:DE|output[6]~29                                                                      ; out              ;
+; |control|decoder:DE|comb~10                                                                           ; |control|decoder:DE|comb~10                                                                           ; out0             ;
+; |control|decoder:DE|output[7]~30                                                                      ; |control|decoder:DE|output[7]~30                                                                      ; out0             ;
+; |control|decoder:DE|output[7]~31                                                                      ; |control|decoder:DE|output[7]~31                                                                      ; out              ;
+; |control|decoder:DE|output[7]~32                                                                      ; |control|decoder:DE|output[7]~32                                                                      ; out0             ;
+; |control|decoder:DE|output[7]~33                                                                      ; |control|decoder:DE|output[7]~33                                                                      ; out              ;
+; |control|decoder:DE|output[7]~34                                                                      ; |control|decoder:DE|output[7]~34                                                                      ; out0             ;
+; |control|decoder:DE|output[7]~35                                                                      ; |control|decoder:DE|output[7]~35                                                                      ; out              ;
+; |control|decoder:DE|comb~11                                                                           ; |control|decoder:DE|comb~11                                                                           ; out0             ;
+; |control|decoder:DE|output[3]                                                                         ; |control|decoder:DE|output[3]                                                                         ; out              ;
+; |control|decoder:DE|comb~12                                                                           ; |control|decoder:DE|comb~12                                                                           ; out0             ;
+; |control|decoder:DE|output[4]                                                                         ; |control|decoder:DE|output[4]                                                                         ; out              ;
+; |control|decoder:DE|comb~13                                                                           ; |control|decoder:DE|comb~13                                                                           ; out0             ;
+; |control|decoder:DE|output[5]                                                                         ; |control|decoder:DE|output[5]                                                                         ; out              ;
+; |control|decoder:DE|comb~14                                                                           ; |control|decoder:DE|comb~14                                                                           ; out0             ;
+; |control|decoder:DE|output[6]                                                                         ; |control|decoder:DE|output[6]                                                                         ; out              ;
+; |control|decoder:DE|comb~15                                                                           ; |control|decoder:DE|comb~15                                                                           ; out0             ;
+; |control|decoder:DE|output[7]                                                                         ; |control|decoder:DE|output[7]                                                                         ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal1~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal1~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal2~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal2~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal3~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal3~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal4~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal4~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal5~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal5~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal6~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal6~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal7~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal7~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal1~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal1~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal2~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal2~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal3~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal3~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal4~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal4~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal5~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal5~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal6~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal6~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal7~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal7~0                                           ; out0             ;
+; |control|decoder:DE|Equal0~0                                                                          ; |control|decoder:DE|Equal0~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal1~0                                                                          ; |control|decoder:DE|Equal1~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal2~0                                                                          ; |control|decoder:DE|Equal2~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal3~0                                                                          ; |control|decoder:DE|Equal3~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal4~0                                                                          ; |control|decoder:DE|Equal4~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal5~0                                                                          ; |control|decoder:DE|Equal5~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal6~0                                                                          ; |control|decoder:DE|Equal6~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal7~0                                                                          ; |control|decoder:DE|Equal7~0                                                                          ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; out0             ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                         ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                             ; Output Port Name                                                                                      ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; |control|INC                                                                                          ; |control|INC                                                                                          ; out              ;
+; |control|CLR                                                                                          ; |control|CLR                                                                                          ; out              ;
+; |control|IR[0]                                                                                        ; |control|IR[0]                                                                                        ; out              ;
+; |control|IR[1]                                                                                        ; |control|IR[1]                                                                                        ; out              ;
+; |control|IR[2]                                                                                        ; |control|IR[2]                                                                                        ; out              ;
+; |control|IR[3]                                                                                        ; |control|IR[3]                                                                                        ; out              ;
+; |control|IR[4]                                                                                        ; |control|IR[4]                                                                                        ; out              ;
+; |control|IR[5]                                                                                        ; |control|IR[5]                                                                                        ; out              ;
+; |control|IR[6]                                                                                        ; |control|IR[6]                                                                                        ; out              ;
+; |control|IR[7]                                                                                        ; |control|IR[7]                                                                                        ; out              ;
+; |control|IR[8]                                                                                        ; |control|IR[8]                                                                                        ; out              ;
+; |control|IR[9]                                                                                        ; |control|IR[9]                                                                                        ; out              ;
+; |control|IR[10]                                                                                       ; |control|IR[10]                                                                                       ; out              ;
+; |control|IR[11]                                                                                       ; |control|IR[11]                                                                                       ; out              ;
+; |control|IR[12]                                                                                       ; |control|IR[12]                                                                                       ; out              ;
+; |control|IR[13]                                                                                       ; |control|IR[13]                                                                                       ; out              ;
+; |control|IR[14]                                                                                       ; |control|IR[14]                                                                                       ; out              ;
+; |control|IR[15]                                                                                       ; |control|IR[15]                                                                                       ; out              ;
+; |control|output[0]                                                                                    ; |control|output[0]                                                                                    ; pin_out          ;
+; |control|output[1]                                                                                    ; |control|output[1]                                                                                    ; pin_out          ;
+; |control|output[2]                                                                                    ; |control|output[2]                                                                                    ; pin_out          ;
+; |control|output[3]                                                                                    ; |control|output[3]                                                                                    ; pin_out          ;
+; |control|output[4]                                                                                    ; |control|output[4]                                                                                    ; pin_out          ;
+; |control|output[5]                                                                                    ; |control|output[5]                                                                                    ; pin_out          ;
+; |control|output[6]                                                                                    ; |control|output[6]                                                                                    ; pin_out          ;
+; |control|output[7]                                                                                    ; |control|output[7]                                                                                    ; pin_out          ;
+; |control|output[8]                                                                                    ; |control|output[8]                                                                                    ; pin_out          ;
+; |control|output[9]                                                                                    ; |control|output[9]                                                                                    ; pin_out          ;
+; |control|output[10]                                                                                   ; |control|output[10]                                                                                   ; pin_out          ;
+; |control|output[11]                                                                                   ; |control|output[11]                                                                                   ; pin_out          ;
+; |control|output[12]                                                                                   ; |control|output[12]                                                                                   ; pin_out          ;
+; |control|output[13]                                                                                   ; |control|output[13]                                                                                   ; pin_out          ;
+; |control|output[14]                                                                                   ; |control|output[14]                                                                                   ; pin_out          ;
+; |control|output[15]                                                                                   ; |control|output[15]                                                                                   ; pin_out          ;
+; |control|output[16]                                                                                   ; |control|output[16]                                                                                   ; pin_out          ;
+; |control|output[17]                                                                                   ; |control|output[17]                                                                                   ; pin_out          ;
+; |control|output[18]                                                                                   ; |control|output[18]                                                                                   ; pin_out          ;
+; |control|output[19]                                                                                   ; |control|output[19]                                                                                   ; pin_out          ;
+; |control|output[20]                                                                                   ; |control|output[20]                                                                                   ; pin_out          ;
+; |control|output[22]                                                                                   ; |control|output[22]                                                                                   ; pin_out          ;
+; |control|output[23]                                                                                   ; |control|output[23]                                                                                   ; pin_out          ;
+; |control|output[24]                                                                                   ; |control|output[24]                                                                                   ; pin_out          ;
+; |control|output[25]                                                                                   ; |control|output[25]                                                                                   ; pin_out          ;
+; |control|output[26]                                                                                   ; |control|output[26]                                                                                   ; pin_out          ;
+; |control|output[27]                                                                                   ; |control|output[27]                                                                                   ; pin_out          ;
+; |control|output[28]                                                                                   ; |control|output[28]                                                                                   ; pin_out          ;
+; |control|output[30]                                                                                   ; |control|output[30]                                                                                   ; pin_out          ;
+; |control|output[31]                                                                                   ; |control|output[31]                                                                                   ; pin_out          ;
+; |control|output[32]                                                                                   ; |control|output[32]                                                                                   ; pin_out          ;
+; |control|output[33]                                                                                   ; |control|output[33]                                                                                   ; pin_out          ;
+; |control|output[34]                                                                                   ; |control|output[34]                                                                                   ; pin_out          ;
+; |control|output[35]                                                                                   ; |control|output[35]                                                                                   ; pin_out          ;
+; |control|output[36]                                                                                   ; |control|output[36]                                                                                   ; pin_out          ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~0                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~0                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~36                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~36                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~37                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~37                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~1                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~1                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~38                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~38                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~2                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~2                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~39                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~39                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~3                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~3                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~40                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~40                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~4                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~4                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~5                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~5                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~41                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~41                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~6                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~6                                        ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~42                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output~42                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~7                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~7                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~8                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~8                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~9                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~9                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~10                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~10                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~11                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~11                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~12                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~12                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~13                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~13                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~14                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~14                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~4                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~4                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]~15                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[1]~15                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~5                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~5                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~16                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~16                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~17                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[2]~17                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~6                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~6                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~18                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~18                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~19                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~19                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~20                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]~20                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~7                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~7                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~21                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~21                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~22                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~22                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~23                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]~23                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~8                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~8                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~24                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~24                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~25                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~25                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~26                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]~26                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~9                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~9                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~27                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~27                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~28                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~28                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~29                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]~29                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~10                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|comb~10                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~30                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~30                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~31                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~31                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~32                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~32                                       ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~33                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~33                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~35                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]~35                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[3]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[4]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[5]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[6]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|output[7]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~36                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~36                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~37                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~37                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~38                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~38                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~2                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~2                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~39                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~39                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~40                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~40                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~4                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~4                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~5                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~5                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~41                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~41                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~42                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output~42                                          ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~7                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~7                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~8                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~8                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~9                                        ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~9                                        ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~11                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~11                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~12                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~12                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~13                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~13                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~14                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~14                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~4                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~4                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]~15                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[1]~15                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~5                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~5                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~16                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~16                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~17                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[2]~17                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~6                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~6                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~18                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~18                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~19                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~19                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~20                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]~20                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~7                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~7                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~21                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~21                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~22                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~22                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~23                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]~23                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~8                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~8                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~24                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~24                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~25                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~25                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~26                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]~26                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~9                                             ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~9                                             ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~27                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~27                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~28                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~28                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~29                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]~29                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~10                                            ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|comb~10                                            ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~31                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~31                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~33                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~33                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~35                                       ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]~35                                       ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[3]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[4]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[5]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[6]                                          ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]                                          ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|output[7]                                          ; out              ;
+; |control|T:TIMINGU|synchcnt:COUNT|j                                                                   ; |control|T:TIMINGU|synchcnt:COUNT|j                                                                   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|k~0                                                                 ; |control|T:TIMINGU|synchcnt:COUNT|k~0                                                                 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|k                                                                   ; |control|T:TIMINGU|synchcnt:COUNT|k                                                                   ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|set                                                        ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|set                                                        ; regout           ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|set                                                        ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|set                                                        ; regout           ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|set                                                        ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|set                                                        ; regout           ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a1|set                                                        ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a1|set                                                        ; regout           ;
+; |control|decoder:DE|comb~0                                                                            ; |control|decoder:DE|comb~0                                                                            ; out0             ;
+; |control|decoder:DE|comb~1                                                                            ; |control|decoder:DE|comb~1                                                                            ; out0             ;
+; |control|decoder:DE|output[7]~1                                                                       ; |control|decoder:DE|output[7]~1                                                                       ; out0             ;
+; |control|decoder:DE|output[0]                                                                         ; |control|decoder:DE|output[0]                                                                         ; out              ;
+; |control|decoder:DE|output[7]~2                                                                       ; |control|decoder:DE|output[7]~2                                                                       ; out              ;
+; |control|decoder:DE|output[7]~3                                                                       ; |control|decoder:DE|output[7]~3                                                                       ; out0             ;
+; |control|decoder:DE|comb~2                                                                            ; |control|decoder:DE|comb~2                                                                            ; out0             ;
+; |control|decoder:DE|output[7]~4                                                                       ; |control|decoder:DE|output[7]~4                                                                       ; out              ;
+; |control|decoder:DE|output[6]~5                                                                       ; |control|decoder:DE|output[6]~5                                                                       ; out              ;
+; |control|decoder:DE|output[1]                                                                         ; |control|decoder:DE|output[1]                                                                         ; out              ;
+; |control|decoder:DE|output[7]~6                                                                       ; |control|decoder:DE|output[7]~6                                                                       ; out0             ;
+; |control|decoder:DE|output[7]~7                                                                       ; |control|decoder:DE|output[7]~7                                                                       ; out              ;
+; |control|decoder:DE|output[6]~8                                                                       ; |control|decoder:DE|output[6]~8                                                                       ; out              ;
+; |control|decoder:DE|output[5]~9                                                                       ; |control|decoder:DE|output[5]~9                                                                       ; out              ;
+; |control|decoder:DE|comb~3                                                                            ; |control|decoder:DE|comb~3                                                                            ; out0             ;
+; |control|decoder:DE|output[7]~10                                                                      ; |control|decoder:DE|output[7]~10                                                                      ; out0             ;
+; |control|decoder:DE|output[2]                                                                         ; |control|decoder:DE|output[2]                                                                         ; out              ;
+; |control|decoder:DE|output[7]~11                                                                      ; |control|decoder:DE|output[7]~11                                                                      ; out              ;
+; |control|decoder:DE|output[6]~12                                                                      ; |control|decoder:DE|output[6]~12                                                                      ; out              ;
+; |control|decoder:DE|output[5]~13                                                                      ; |control|decoder:DE|output[5]~13                                                                      ; out              ;
+; |control|decoder:DE|output[4]~14                                                                      ; |control|decoder:DE|output[4]~14                                                                      ; out              ;
+; |control|decoder:DE|comb~4                                                                            ; |control|decoder:DE|comb~4                                                                            ; out0             ;
+; |control|decoder:DE|output[1]~15                                                                      ; |control|decoder:DE|output[1]~15                                                                      ; out              ;
+; |control|decoder:DE|comb~5                                                                            ; |control|decoder:DE|comb~5                                                                            ; out0             ;
+; |control|decoder:DE|output[2]~16                                                                      ; |control|decoder:DE|output[2]~16                                                                      ; out              ;
+; |control|decoder:DE|output[2]~17                                                                      ; |control|decoder:DE|output[2]~17                                                                      ; out              ;
+; |control|decoder:DE|comb~6                                                                            ; |control|decoder:DE|comb~6                                                                            ; out0             ;
+; |control|decoder:DE|output[3]~18                                                                      ; |control|decoder:DE|output[3]~18                                                                      ; out              ;
+; |control|decoder:DE|output[3]~19                                                                      ; |control|decoder:DE|output[3]~19                                                                      ; out              ;
+; |control|decoder:DE|output[3]~20                                                                      ; |control|decoder:DE|output[3]~20                                                                      ; out              ;
+; |control|decoder:DE|comb~7                                                                            ; |control|decoder:DE|comb~7                                                                            ; out0             ;
+; |control|decoder:DE|output[4]~21                                                                      ; |control|decoder:DE|output[4]~21                                                                      ; out              ;
+; |control|decoder:DE|output[4]~22                                                                      ; |control|decoder:DE|output[4]~22                                                                      ; out              ;
+; |control|decoder:DE|output[4]~23                                                                      ; |control|decoder:DE|output[4]~23                                                                      ; out              ;
+; |control|decoder:DE|comb~8                                                                            ; |control|decoder:DE|comb~8                                                                            ; out0             ;
+; |control|decoder:DE|output[5]~24                                                                      ; |control|decoder:DE|output[5]~24                                                                      ; out              ;
+; |control|decoder:DE|output[5]~25                                                                      ; |control|decoder:DE|output[5]~25                                                                      ; out              ;
+; |control|decoder:DE|output[5]~26                                                                      ; |control|decoder:DE|output[5]~26                                                                      ; out              ;
+; |control|decoder:DE|comb~9                                                                            ; |control|decoder:DE|comb~9                                                                            ; out0             ;
+; |control|decoder:DE|output[6]~27                                                                      ; |control|decoder:DE|output[6]~27                                                                      ; out              ;
+; |control|decoder:DE|output[6]~28                                                                      ; |control|decoder:DE|output[6]~28                                                                      ; out              ;
+; |control|decoder:DE|output[6]~29                                                                      ; |control|decoder:DE|output[6]~29                                                                      ; out              ;
+; |control|decoder:DE|comb~10                                                                           ; |control|decoder:DE|comb~10                                                                           ; out0             ;
+; |control|decoder:DE|output[7]~30                                                                      ; |control|decoder:DE|output[7]~30                                                                      ; out0             ;
+; |control|decoder:DE|output[7]~31                                                                      ; |control|decoder:DE|output[7]~31                                                                      ; out              ;
+; |control|decoder:DE|output[7]~32                                                                      ; |control|decoder:DE|output[7]~32                                                                      ; out0             ;
+; |control|decoder:DE|output[7]~33                                                                      ; |control|decoder:DE|output[7]~33                                                                      ; out              ;
+; |control|decoder:DE|output[7]~34                                                                      ; |control|decoder:DE|output[7]~34                                                                      ; out0             ;
+; |control|decoder:DE|output[7]~35                                                                      ; |control|decoder:DE|output[7]~35                                                                      ; out              ;
+; |control|decoder:DE|comb~11                                                                           ; |control|decoder:DE|comb~11                                                                           ; out0             ;
+; |control|decoder:DE|output[3]                                                                         ; |control|decoder:DE|output[3]                                                                         ; out              ;
+; |control|decoder:DE|comb~12                                                                           ; |control|decoder:DE|comb~12                                                                           ; out0             ;
+; |control|decoder:DE|output[4]                                                                         ; |control|decoder:DE|output[4]                                                                         ; out              ;
+; |control|decoder:DE|comb~13                                                                           ; |control|decoder:DE|comb~13                                                                           ; out0             ;
+; |control|decoder:DE|output[5]                                                                         ; |control|decoder:DE|output[5]                                                                         ; out              ;
+; |control|decoder:DE|comb~14                                                                           ; |control|decoder:DE|comb~14                                                                           ; out0             ;
+; |control|decoder:DE|output[6]                                                                         ; |control|decoder:DE|output[6]                                                                         ; out              ;
+; |control|decoder:DE|comb~15                                                                           ; |control|decoder:DE|comb~15                                                                           ; out0             ;
+; |control|decoder:DE|output[7]                                                                         ; |control|decoder:DE|output[7]                                                                         ; out              ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal0~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal0~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal1~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal1~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal2~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal2~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal3~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal3~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal4~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal4~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal5~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal5~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal6~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER2|Equal6~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal0~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal0~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal1~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal1~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal2~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal2~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal3~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal3~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal4~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal4~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal5~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal5~0                                           ; out0             ;
+; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal6~0                                           ; |control|T:TIMINGU|decoder16:DEC1|decoder:DECODER1|Equal6~0                                           ; out0             ;
+; |control|decoder:DE|Equal0~0                                                                          ; |control|decoder:DE|Equal0~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal1~0                                                                          ; |control|decoder:DE|Equal1~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal2~0                                                                          ; |control|decoder:DE|Equal2~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal3~0                                                                          ; |control|decoder:DE|Equal3~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal4~0                                                                          ; |control|decoder:DE|Equal4~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal5~0                                                                          ; |control|decoder:DE|Equal5~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal6~0                                                                          ; |control|decoder:DE|Equal6~0                                                                          ; out0             ;
+; |control|decoder:DE|Equal7~0                                                                          ; |control|decoder:DE|Equal7~0                                                                          ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a3|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |control|T:TIMINGU|synchcnt:COUNT|jk_ff:a4|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
++-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Aug 15 17:36:06 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off control -c control
+Info: Using vector source file "C:/Users/Mohammed/Desktop/Lab08/control.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      14.29 %
+Info: Number of transitions in simulation is 1139
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 142 megabytes
+    Info: Processing ended: Sun Aug 15 17:36:06 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

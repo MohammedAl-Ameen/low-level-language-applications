@@ -1,0 +1,20 @@
+#include<16f877a.h>
+#fuses xt,nowdt
+#use delay(clock = 2000000)
+#use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7)
+
+
+void main()
+{
+   while(1)
+   {
+      printf("Hello my name is Mohammed");
+      delay_ms(1000);
+      printf("Stude A computer Eng");
+      delay_ms(1000);
+      printf("My age 23\r\r");
+      delay_ms(1000);
+   }
+   
+}
+

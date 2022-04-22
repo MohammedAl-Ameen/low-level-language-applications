@@ -1,0 +1,19 @@
+|bit4
+clk => output[0]~reg0.CLK
+clk => output[1]~reg0.CLK
+clk => output[2]~reg0.CLK
+clk => output[3]~reg0.CLK
+CLR => output~4.OUTPUTSELECT
+CLR => output~5.OUTPUTSELECT
+CLR => output~6.OUTPUTSELECT
+CLR => output~7.OUTPUTSELECT
+Decr => output~0.OUTPUTSELECT
+Decr => output~1.OUTPUTSELECT
+Decr => output~2.OUTPUTSELECT
+Decr => output~3.OUTPUTSELECT
+output[0] << output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] << output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[2] << output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[3] << output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
