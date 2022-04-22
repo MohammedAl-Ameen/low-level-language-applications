@@ -1,0 +1,53 @@
+[PROJECT]
+Target=Task3.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=Task3.c
+[Task3.c]
+Type=4
+[mru-list]
+1=Task3.c
+
+[defines]
+buildcount=94
+
+[Opened Files]
+1=Task3.c
+t1=21
+Count=1
+
+[ProjectLog]
+Days=1
+D1=30-10-2020
+D1_L=22
+D1_L1=[68407]Stopped Editing.
+D1_L2=[68419]Started Editing.
+D1_L3=[72358]Stopped Editing.
+D1_L4=[72718]Started Editing.
+D1_L5=[73354]Stopped Editing.
+D1_L6=[73782]Started Editing.
+D1_L7=[74848]Stopped Editing.
+D1_L8=[74861]Started Editing.
+D1_L9=[76021]Stopped Editing.
+D1_L10=[76093]Started Editing.
+D1_L11=[76469]Stopped Editing.
+TotalEdit=127
+TotalDebug=0
+D1_E=127
+D1_D=0
+D1_L12=[76469]Project Closed.
+D1_L13=[76585]Project Opened.
+D1_L14=[76637]Started Editing.
+D1_L15=[77458]Stopped Editing.
+D1_L16=[77458]Project Closed.
+D1_L17=[77645]Project Opened.
+D1_L18=[77656]Project Closed.
+D1_L19=[78118]Project Opened.
+D1_L20=[78131]Started Editing.
+D1_L21=[78175]Stopped Editing.
+D1_L22=[78175]Project Closed.
+[Units]
+Count=1
+1=Task3 (main)

@@ -1,0 +1,27 @@
+#include<16f877a.h>
+#use delay(clock = 4000000)
+#include <lcd.c>
+
+
+double value;
+
+void main(){
+lcd_init();
+setup_adc(ADC_CLOCK_INTERNAL);
+setup_adc_ports(ALL_ANALOG);
+
+while(1){
+
+
+
+
+}
+
+
+
+
+
+
+
+
+}

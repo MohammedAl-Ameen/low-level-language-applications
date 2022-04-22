@@ -1,0 +1,11 @@
+юд1#
+   цдMAIN  0/36  Ram=0
+   Ё  юд@cinit1  (Inline)  Ram=0
+   цдRDA_ISR  0/48  Ram=0
+   Ё  цд@PUTCHAR_2_  0/34  Ram=1
+   Ё  цд@PSTRINGR_598  (Inline)  Ram=2
+   Ё  Ё  юд@PUTCHAR_2_  0/34  Ram=1
+   Ё  юд@PUTCHAR_2_  0/34  Ram=1
+   юдEXT_ISR  0/84  Ram=0
+      цд@GETCH_2_  (Inline)  Ram=1
+      юд@PSTRINGR_9600_62_63  (Inline)  Ram=2

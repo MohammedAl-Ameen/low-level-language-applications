@@ -1,0 +1,71 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 @sprintf_string
+022     main.@SCRATCH1
+022     @PSTRINGC7_9600_62_63.@SCRATCH1
+023     @delay_ms1.P1
+023     @PSTRINGC7_9600_62_63.@SCRATCH2
+024     @PSTRINGC7_9600_62_63.@SCRATCH3
+025     @PSTRINGC7_9600_62_63.@SCRATCH4
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const602.call
+000012  @const607.call
+000020  @const608.call
+000029  @PSTRINGC7_9600_62_63
+000081  @delay_ms1
+00008F  main
+00008F  @cinit1
+0000A3  @cinit2
+
+Project Directory:
+    C:\Users\mohmmed\Desktop\Task2\Part1\PIC#1\
+
+Project Files:
+    #1.c                                                    [24-Oct-20 22:23  CRC=EF96A3AB]
+    D:\Program\PICC\Devices\16f877a.h                       [08-Sep-15 15:15  CRC=B168AC0E]
+
+Source signature=5267FBC7
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=7A64
+
+Units:
+    #1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   #1.xsym
+    Errors:      #1.err
+    Ext Symbols: #1.esym
+    INHX8:       #1.hex
+    Symbols:     #1.sym
+    List:        #1.lst
+    Debug/COFF:  #1.cof
+    Project:     #1.ccspjt
+    Call Tree:   #1.tre
+    Statistics:  #1.STA

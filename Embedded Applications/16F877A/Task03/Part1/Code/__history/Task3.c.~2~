@@ -1,0 +1,5 @@
+#include<16f877a.h>
+#use delay(clock = 4000000)
+#include <lcd.c>
+#include<MPX4115.c>
+

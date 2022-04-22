@@ -1,0 +1,108 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027-028 strtok.save
+029-05A string
+05B-05C @sprintf_string
+05D     @PSTRINGR_9600_62_63.@SCRATCH1
+05E     @PSTRINGR_9600_62_63.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000031  RDA_ISR
+000042  @PSTRINGR_9600_62_63
+000060  @cinit1
+000060  MAIN
+000074  @cinit2
+
+Project Directory:
+    C:\Users\mohmmed\Desktop\Task2\Part2\PIC1#\
+
+Project Files:
+    #1.c                                                    [24-Oct-20 22:27  CRC=2DDD63E0]
+    D:\Program\PICC\Devices\16f877a.h                       [08-Sep-15 15:15  CRC=B168AC0E]
+    D:\Program\PICC\Drivers\string.h                        [26-Mar-15 12:34  CRC=C4814297]
+    D:\Program\PICC\Drivers\stddef.h                        [05-Sep-14 11:47  CRC=897CEC6C]
+    D:\Program\PICC\Drivers\ctype.h                         [03-Jan-08 14:55  CRC=2D1F019F]
+
+Source signature=8782422F
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=5946
+
+Units:
+    #1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   #1.xsym
+    Errors:      #1.err
+    Ext Symbols: #1.esym
+    INHX8:       #1.hex
+    Symbols:     #1.sym
+    List:        #1.lst
+    Debug/COFF:  #1.cof
+    Project:     #1.ccspjt
+    Call Tree:   #1.tre
+    Statistics:  #1.STA

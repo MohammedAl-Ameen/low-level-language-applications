@@ -1,0 +1,6 @@
+>>> Warning 208 "1#.c" Line 10(1,8): Function not void and does not return a value  RDA_ISR
+>>> Warning 208 "1#.c" Line 16(1,8): Function not void and does not return a value  EXT_ISR
+>>> Warning 203 "1#.c" Line 27(1,1): Condition always TRUE
+      Memory usage:   ROM=3%      RAM=18% - 19%
+      0 Errors,  3 Warnings.
+Build Successful.

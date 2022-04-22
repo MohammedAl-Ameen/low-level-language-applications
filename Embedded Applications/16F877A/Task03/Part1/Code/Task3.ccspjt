@@ -1,0 +1,42 @@
+[PROJECT]
+Target=Task3.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=Task3.c
+[Task3.c]
+Type=4
+[mru-list]
+1=Task3.c
+
+[defines]
+buildcount=26
+
+[Opened Files]
+1=Task3.c
+t1=1
+Count=1
+2=..\..\AppData\Local\Temp\Rar$DIa30648.46617\source_code.c
+t2=9
+
+[ProjectLog]
+Days=1
+D1=30-10-2020
+D1_L=9
+D1_L1=[66564]Project Closed.
+D1_L2=[77663]Project Opened.
+D1_L3=[77696]Started Editing.
+D1_L4=[77745]Stopped Editing.
+TotalEdit=3
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L5=[77745]Project Closed.
+D1_L6=[77962]Project Opened.
+D1_L7=[77969]Started Editing.
+D1_L8=[78082]Stopped Editing.
+D1_L9=[78082]Project Closed.
+[Units]
+Count=1
+1=Task3 (main)

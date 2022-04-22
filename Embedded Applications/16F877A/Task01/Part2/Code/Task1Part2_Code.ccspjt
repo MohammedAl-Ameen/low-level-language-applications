@@ -1,0 +1,37 @@
+[PROJECT]
+Target=Task1Part2_Code.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=Task1Part2_Code.c
+[Task1Part2_Code.c]
+Type=4
+[mru-list]
+1=Task1Part2_Code.c
+
+[defines]
+buildcount=18
+
+[Opened Files]
+1=Task1Part2_Code.c
+t1=12
+Count=1
+
+[ProjectLog]
+Days=1
+D1=21-10-2020
+D1_L=6
+D1_L1=[12605]Stopped Editing.
+D1_L2=[12634]Started Editing.
+D1_L3=[13160]Stopped Editing.
+D1_L4=[13167]Started Editing.
+D1_L5=[14120]Stopped Editing.
+TotalEdit=48
+TotalDebug=0
+D1_E=48
+D1_D=0
+D1_L6=[14127]Project Closed.
+[Units]
+Count=1
+1=Task1Part2_Code (main)

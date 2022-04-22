@@ -1,0 +1,214 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-022 strtok.save
+023-026 _Randseed
+027-033 name
+034-043 Text
+044-047 value
+048-04B per
+04C-04D @sprintf_string
+04E-061 MAIN.value1
+062-075 MAIN.value2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+0A0-0A3 @PRINTF_L32D_970FPFPF.P1
+0A0     @delay_ms1.P2
+0A0-0A1 strcmp.s1
+0A0     glcd_text57.x
+0A0     glcd_init.mode
+0A0-0A3 @SFTOI.P1
+0A0     MAIN.@SCRATCH1
+0A1     glcd_fillScreen.color
+0A1     glcd_rect.x1
+0A1     glcd_text57.y
+0A1     MAIN.@SCRATCH2
+0A2-0A3 @ITOF.P1
+0A2     glcd_rect.y1
+0A2-0A3 strcmp.s2
+0A2-0A3 glcd_text57.textptr
+0A2     glcd_fillScreen.i
+0A2     MAIN.@SCRATCH3
+0A3     glcd_rect.x2
+0A3     glcd_fillScreen.j
+0A3     MAIN.@SCRATCH4
+0A4-0A7 @ADDFF.P1
+0A4-0A7 @DIVFF.P2
+0A4     glcd_rect.y2
+0A4     @PRINTF_L32D_970FPFPF.P1
+0A4     glcd_text57.size
+0A4     glcd_fillScreen.@SCRATCH1
+0A4     strcmp.@SCRATCH1
+0A4     MAIN.@SCRATCH5
+0A5     glcd_rect.fill
+0A5     glcd_text57.color
+0A5     @PRINTF_L32D_970FPFPF.@SCRATCH1
+0A6     glcd_rect.color
+0A6     glcd_text57.j
+0A6     @PRINTF_L32D_970FPFPF.@SCRATCH2
+0A7     glcd_rect.i
+0A7     glcd_text57.k
+0A7     @PRINTF_L32D_970FPFPF.@SCRATCH3
+0A8-0AB @ADDFF.P1
+0A8     glcd_text57.l
+0A8-0AB @DIVFF.P1
+0A8     glcd_rect.xmin
+0A8     @PRINTF_L32D_970FPFPF.@SCRATCH4
+0A9     glcd_text57.m
+0A9     glcd_rect.xmax
+0A9     @PRINTF_L32D_970FPFPF.@SCRATCH5
+0AA-0AE glcd_text57.pixelData
+0AA     glcd_rect.ymin
+0AA     @PRINTF_L32D_970FPFPF.@SCRATCH6
+0AB     glcd_rect.ymax
+0AB     @PRINTF_L32D_970FPFPF.@SCRATCH7
+0AC     glcd_line.x1
+0AC     @ADDFF.@SCRATCH1
+0AC     @DIVFF.@SCRATCH1
+0AC     @PRINTF_L32D_970FPFPF.@SCRATCH8
+0AD-0B0 @FTOSD.P1
+0AD     glcd_line.y1
+0AD-0B0 @MULFF.P1
+0AD     @SPRINTF.P2
+0AD-0B0 @DIV3232.P3
+0AD     @ADDFF.@SCRATCH2
+0AD     @DIVFF.@SCRATCH2
+0AE     glcd_line.x2
+0AE     @ADDFF.@SCRATCH3
+0AE     @DIVFF.@SCRATCH3
+0AF     glcd_line.y2
+0AF     glcd_text57.@SCRATCH1
+0AF     @ADDFF.@SCRATCH4
+0AF     @DIVFF.@SCRATCH4
+0B0     glcd_line.color
+0B0     glcd_text57.@SCRATCH2
+0B0     @ADDFF.@SCRATCH5
+0B0     @DIVFF.@SCRATCH5
+0B1-0B4 @DIV3232.P1
+0B1-0B2 glcd_line.dy
+0B1     @MUL88.P1
+0B1-0B4 @MULFF.P2
+0B1     glcd_text57.@SCRATCH3
+0B1     @ADDFF.@SCRATCH6
+0B1     @DIVFF.@SCRATCH6
+0B1     @FTOSD.@SCRATCH1
+0B2     @MUL88.P1
+0B2     glcd_text57.@SCRATCH4
+0B2     @ADDFF.@SCRATCH7
+0B3-0B4 glcd_line.dx
+0B3     glcd_text57.@SCRATCH5
+0B3     @ADDFF.@SCRATCH8
+0B5     glcd_line.addx
+0B5     @MULFF.@SCRATCH1
+0B5     @DIV3232.@SCRATCH1
+0B6     glcd_line.addy
+0B6     @MULFF.@SCRATCH2
+0B6     @DIV3232.@SCRATCH2
+0B7-0B8 glcd_line.P
+0B7     @MULFF.@SCRATCH3
+0B7     @DIV3232.@SCRATCH3
+0B8     @MULFF.@SCRATCH4
+0B8     @DIV3232.@SCRATCH4
+0B9-0BA glcd_line.diff
+0B9     @MULFF.@SCRATCH5
+0B9     @DIV3232.@SCRATCH5
+0BB     glcd_line.i
+0BC     glcd_pixel.x
+0BC     glcd_line.@SCRATCH1
+0BD     glcd_pixel.y
+0BE     glcd_pixel.color
+0BF     glcd_pixel.data
+0C0.0   glcd_pixel.side
+0C1     glcd_pixel.@SCRATCH1
+0C2     glcd_readByte.side
+0C2     glcd_pixel.@SCRATCH2
+0C3     glcd_readByte.data
+0C3     glcd_writeByte.side
+0C4     glcd_writeByte.data
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  FONT.call
+00000B  FONT.data
+00010A  FONT2.call
+00010E  FONT2.data
+0001EA  glcd_writeByte
+000215  @MUL88
+00023C  glcd_init
+000298  glcd_fillScreen
+0002F1  @delay_ms1
+000308  glcd_readByte
+000337  glcd_pixel
+0003B9  glcd_line
+000475  glcd_rect
+0004E1  glcd_text57
+0005D9  @ITOF
+0005FA  @MULFF
+000671  @DIVFF
+00073D  @DIV3232
+00078E  @SPRINTF
+00079D  strcmp
+000800  @ADDFF
+000946  @PRINTF_L32D_970FPFPF
+000972  @FTOSD
+000A4A  @SFTOI
+000A6B  MAIN
+000A6B  @cinit1
+000A79  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\mohmmed\Desktop\Task3\Part2\Code\
+
+Project Files:
+    Task3.c                                                 [30-Oct-20 21:42  CRC=C69A03E8]
+    D:\Program\PICC\Devices\16f877a.h                       [08-Sep-15 14:15  CRC=B168AC0E]
+    D:\Program\PICC\Drivers\HDM64GS12.c                     [08-Jul-10 08:47  CRC=C1C373EF]
+    D:\Program\PICC\Drivers\graphics.c                      [06-Jul-10 08:49  CRC=70BB89DE]
+    D:\Program\PICC\Drivers\stdlib.h                        [07-Dec-14 16:58  CRC=07F0FCBD]
+    D:\Program\PICC\Drivers\stddef.h                        [05-Sep-14 10:47  CRC=897CEC6C]
+    D:\Program\PICC\Drivers\string.h                        [26-Mar-15 11:34  CRC=C4814297]
+    D:\Program\PICC\Drivers\ctype.h                         [03-Jan-08 13:55  CRC=2D1F019F]
+
+Source signature=5AAEDCC1
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=2A1B
+
+Units:
+    Task3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Task3.xsym
+    Errors:      Task3.err
+    Ext Symbols: Task3.esym
+    INHX8:       Task3.hex
+    Symbols:     Task3.sym
+    List:        Task3.lst
+    Debug/COFF:  Task3.cof
+    Project:     Task3.ccspjt
+    Call Tree:   Task3.tre
+    Statistics:  Task3.STA

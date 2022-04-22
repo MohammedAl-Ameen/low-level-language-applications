@@ -1,0 +1,62 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     main.@SCRATCH1
+022     main.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+000010  @cinit2
+
+Project Directory:
+    C:\Users\mohmmed\Desktop\0\Part1\Code\
+
+Project Files:
+    source_code.c                                           [08-Nov-20 23:26  CRC=754AAEB9]
+    D:\Program\PICC\Devices\16f877a.h                       [08-Sep-15 14:15  CRC=B168AC0E]
+
+Source signature=D81C06D5
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=2115
+
+Units:
+    source_code (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   source_code.xsym
+    Errors:      source_code.err
+    Ext Symbols: source_code.esym
+    INHX8:       source_code.hex
+    Symbols:     source_code.sym
+    List:        source_code.lst
+    Debug/COFF:  source_code.cof
+    Project:     source_code.ccspjt
+    Call Tree:   source_code.tre
+    Statistics:  source_code.STA

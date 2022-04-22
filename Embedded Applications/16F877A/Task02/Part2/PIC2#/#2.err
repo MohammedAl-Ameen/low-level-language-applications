@@ -1,0 +1,5 @@
+>>> Warning 208 "#2.c" Line 12(1,8): Function not void and does not return a value  RDA_ISR
+>>> Warning 203 "#2.c" Line 35(1,1): Condition always TRUE
+      Memory usage:   ROM=7%      RAM=24% - 27%
+      0 Errors,  2 Warnings.
+Build Successful.

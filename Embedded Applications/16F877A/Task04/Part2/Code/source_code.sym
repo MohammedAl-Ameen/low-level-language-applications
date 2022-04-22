@@ -1,0 +1,114 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     lcdlat
+008     PSP_DATA
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-023 Temp
+024-025 @sprintf_string
+026     @TRIS_C
+027     lcd_init.i
+027-02A @FLT.P1
+027     MAIN.@SCRATCH1
+027     @PSTRINGC7_622.@SCRATCH1
+028-02B lcd_init.LCD_INIT_STRING
+028     MAIN.@SCRATCH2
+028     @PSTRINGC7_622.@SCRATCH2
+029-02C @MULFF.P1
+029-02A @ITOF.P2
+029     @PSTRINGC7_622.@SCRATCH3
+02A     lcd_putc.c
+02A     @PSTRINGC7_622.@SCRATCH4
+02B     lcd_gotoxy.x
+02B-02E @FLT.P1
+02C     lcd_gotoxy.y
+02C     @delay_ms1.P1
+02C     lcd_init.@SCRATCH1
+02D     lcd_gotoxy.address
+02D-030 @MULFF.P1
+02E     lcd_gotoxy.@SCRATCH1
+02F     lcd_send_byte.address
+02F     @FLT.@SCRATCH1
+030     lcd_send_byte.n
+030     @FLT.@SCRATCH2
+031     lcd_read_byte.low
+031     lcd_send_byte.@SCRATCH1
+031     @MULFF.@SCRATCH1
+032     lcd_read_byte.high
+032     lcd_send_nibble.n
+032     @MULFF.@SCRATCH2
+033     lcd_read_byte.@SCRATCH1
+033     @MULFF.@SCRATCH3
+034     @MULFF.@SCRATCH4
+035     @MULFF.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const647.call
+000008  @const653.call
+000010  @delay_ms1
+000025  lcd_send_nibble
+000031  lcd_read_nibble
+000037  lcd_send_byte
+00003D  lcd_read_byte
+000077  lcd_init
+0000B5  @ITOF
+0000D4  @MULFF
+00014B  lcd_gotoxy
+00015D  lcd_putc
+000189  @FLT
+0001C8  @PSTRINGC7_622
+00021E  MAIN
+00021E  @cinit1
+00022C  @cinit2
+
+Project Directory:
+    C:\Users\mohmmed\Desktop\0\Part2\Code\
+
+Project Files:
+    source_code.c                                           [08-Nov-20 23:32  CRC=8F1F6BA0]
+    D:\Program\PICC\Devices\16F877A.h                       [08-Sep-15 14:15  CRC=B168AC0E]
+    D:\Program\PICC\Drivers\lcd.c                           [19-Sep-13 15:38  CRC=D1A6378A]
+
+Source signature=E3D486C2
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=7F01
+
+Units:
+    source_code (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   source_code.xsym
+    Errors:      source_code.err
+    Ext Symbols: source_code.esym
+    INHX8:       source_code.hex
+    Symbols:     source_code.sym
+    List:        source_code.lst
+    Debug/COFF:  source_code.cof
+    Project:     source_code.ccspjt
+    Call Tree:   source_code.tre
+    Statistics:  source_code.STA

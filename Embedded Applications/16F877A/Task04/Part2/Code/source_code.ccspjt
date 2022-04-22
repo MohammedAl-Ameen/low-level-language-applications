@@ -1,0 +1,28 @@
+[PROJECT]
+Target=source_code.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=source_code.c
+[source_code.c]
+Type=4
+[mru-list]
+1=source_code.c
+[Units]
+Count=1
+1=source_code (main)
+
+[defines]
+buildcount=1
+
+[Opened Files]
+1=source_code.c
+t1=12
+Count=1
+
+[ProjectLog]
+Days=1
+D1=08-11-2020
+D1_L=1
+D1_L1=[84810]Project Closed.
